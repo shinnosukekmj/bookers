@@ -1,0 +1,97 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.notice{
+    color:green;
+    margin:50px;
+}
+
+.show-box{
+    margin:50px;
+}
+
+.show-title{
+    margin-bottom:30px;
+}
+
+.show-bottom{
+    margin-left:20px;
+}
+
+.edit-box{
+    margin:50px;
+}
+
+.new-box{
+    margin:30px;
+}
+
+.edit-bottom{
+    margin-top:20px;
+}
+
+.index-box{
+    margin:30px;
+}
+
+.index-bottom>p{
+    white-space:nowrap;
+    height:25px;
+}
+
+.book.text{
+    text-align:left;
+}
+
+.table-box{
+    border-collapse: separate;
+    border-spacing: 40px 0px;
+}
+
+.errors-box{
+    border:2px solid red;
+    margin-bottom:10px;
+    background-color:#CC0000;
+}
+
+
+.errors-title{
+    margin-left:20px;
+    color:white;
+    height:30px;
+}
+
+.errors-inside{
+    background-color:#DDDDDD;
+    padding:40px;
+}
+
+.errors-text{
+    list-style:square;
+}
+
+.edit-content1{
+    margin-top:40px;
+}
+
+.edit-content3{
+    margin-top:20px;
+}
+
+
+.edit-content5{
+    margin-top:10px;
+}
+
+.new-box1{
+    margin-top:30px;
+}
+
+.new-box3{
+    margin-top:20px;
+}
+
+.new-box5{
+    margin-top:10px;
+}

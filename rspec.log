@@ -1,0 +1,205 @@
+
+Book モデルに関するテスト
+  実際に保存してみる
+[32m    有効な投稿内容の場合は保存されるか[0m
+  空白のバリデーションチェック
+[32m    titleが空白の場合にバリデーションチェックされ空白のエラーメッセージが返ってきているか[0m
+[32m    bodyが空白の場合にバリデーションチェックされ空白のエラーメッセージが返ってきているか[0m
+  titleを空白で投稿した場合に画面にエラーメッセージが表示されているか
+[31m    エラーメッセージは正しく表示されるか (FAILED - 1)[0m
+  bodyを空白で投稿した場合に画面にエラーメッセージが表示されているか
+[31m    エラーメッセージは正しく表示されるか (FAILED - 2)[0m
+
+投稿のテスト
+  トップ画面(root_path)のテスト
+    表示の確認
+[31m      トップ画面(root_path)に一覧ページへのリンクが表示されているか (FAILED - 3)[0m
+[32m      root_pathが"/"であるか[0m
+  一覧画面のテスト
+    一覧の表示とリンクの確認
+[31m      bookの一覧表示(tableタグ)と投稿フォームが同一画面に表示されているか (FAILED - 4)[0m
+[31m      bookのタイトルと感想を表示し、詳細・編集・削除のリンクが表示されているか (FAILED - 5)[0m
+[31m      Create Bookボタンが表示される (FAILED - 6)[0m
+    投稿処理に関するテスト
+[31m      投稿に成功しサクセスメッセージが表示されるか (FAILED - 7)[0m
+[31m      投稿に失敗する (FAILED - 8)[0m
+[31m      投稿後のリダイレクト先は正しいか (FAILED - 9)[0m
+    book削除のテスト
+[31m      application.html.erbにjavascript_pack_tagを含んでいるか (FAILED - 10)[0m
+[31m      bookの削除 (FAILED - 11)[0m
+  詳細画面のテスト
+    表示の確認
+[32m      本のタイトルと感想が画面に表示されていること[0m
+[31m      Editリンクが表示される (FAILED - 12)[0m
+[31m      Backリンクが表示される (FAILED - 13)[0m
+    リンクの遷移先の確認
+[31m      Editの遷移先は編集画面か (FAILED - 14)[0m
+[31m      Backの遷移先は一覧画面か (FAILED - 15)[0m
+  編集画面のテスト
+    表示の確認
+[32m      編集前のタイトルと感想がフォームに表示(セット)されている[0m
+[32m      Update Bookボタンが表示される[0m
+[32m      Showリンクが表示される[0m
+[32m      Backリンクが表示される[0m
+    リンクの遷移先の確認
+[32m      Showの遷移先は詳細画面か[0m
+[31m      Backの遷移先は一覧画面か (FAILED - 16)[0m
+    更新処理に関するテスト
+[32m      更新に成功しサクセスメッセージが表示されるか[0m
+[32m      更新に失敗しエラーメッセージが表示されるか[0m
+[31m      更新後のリダイレクト先は正しいか (FAILED - 17)[0m
+
+Failures:
+
+  1) Book モデルに関するテスト titleを空白で投稿した場合に画面にエラーメッセージが表示されているか エラーメッセージは正しく表示されるか
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Book::Title:0x0000000006a234f0>[0m
+     [31m  Did you mean?  book_path[0m
+     [36m# ./spec/models/book_spec.rb:25:in `block (3 levels) in <top (required)>'[0m
+
+  2) Book モデルに関するテスト bodyを空白で投稿した場合に画面にエラーメッセージが表示されているか エラーメッセージは正しく表示されるか
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Book::Body:0x0000000006a27870>[0m
+     [31m  Did you mean?  book_path[0m
+     [36m# ./spec/models/book_spec.rb:35:in `block (3 levels) in <top (required)>'[0m
+
+  3) 投稿のテスト トップ画面(root_path)のテスト 表示の確認 トップ画面(root_path)に一覧ページへのリンクが表示されているか
+     [31mFailure/Error: expect(page).to have_link "", href: books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::RootPath::Nested:0x0000000006a2a3b8>[0m
+     [36m# ./spec/system/books_spec.rb:11:in `block (4 levels) in <main>'[0m
+
+  4) 投稿のテスト 一覧画面のテスト 一覧の表示とリンクの確認 bookの一覧表示(tableタグ)と投稿フォームが同一画面に表示されているか
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Nested:0x0000000006e345f8>[0m
+     [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  5) 投稿のテスト 一覧画面のテスト 一覧の表示とリンクの確認 bookのタイトルと感想を表示し、詳細・編集・削除のリンクが表示されているか
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Nested:0x0000000006e430f8>[0m
+     [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  6) 投稿のテスト 一覧画面のテスト 一覧の表示とリンクの確認 Create Bookボタンが表示される
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Nested:0x0000000006e49d90>[0m
+     [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  7) 投稿のテスト 一覧画面のテスト 投稿処理に関するテスト 投稿に成功しサクセスメッセージが表示されるか
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Nested_2:0x0000000006e57e40>[0m
+     [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  8) 投稿のテスト 一覧画面のテスト 投稿処理に関するテスト 投稿に失敗する
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Nested_2:0x0000000006e5e970>[0m
+     [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  9) 投稿のテスト 一覧画面のテスト 投稿処理に関するテスト 投稿後のリダイレクト先は正しいか
+     [31mFailure/Error: visit books_path[0m
+     [31m[0m
+     [31mNameError:[0m
+     [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Nested_2:0x0000000006e65630>[0m
+     [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  10) 投稿のテスト 一覧画面のテスト book削除のテスト application.html.erbにjavascript_pack_tagを含んでいるか
+      [31mFailure/Error: visit books_path[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Book:0x0000000006e736b8>[0m
+      [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  11) 投稿のテスト 一覧画面のテスト book削除のテスト bookの削除
+      [31mFailure/Error: visit books_path[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested::Book:0x0000000006e7a210>[0m
+      [36m# ./spec/system/books_spec.rb:20:in `block (3 levels) in <main>'[0m
+
+  12) 投稿のテスト 詳細画面のテスト 表示の確認 Editリンクが表示される
+      [31mFailure/Error: expect(edit_link.native.inner_text).to match(/edit/i)[0m
+      [31m[0m
+      [31m  expected "Show" to match /edit/i[0m
+      [31m  Diff:[0m[0m
+      [31m  [0m[34m@@ -1 +1 @@[0m
+      [31m  [0m[31m-/edit/i[0m
+      [31m  [0m[32m+"Show"[0m
+      [31m  [0m[0m
+      [36m# ./spec/system/books_spec.rb:106:in `block (4 levels) in <main>'[0m
+
+  13) 投稿のテスト 詳細画面のテスト 表示の確認 Backリンクが表示される
+      [31mFailure/Error: expect(back_link.native.inner_text).to match(/back/i)[0m
+      [31m[0m
+      [31m  expected "Edit" to match /back/i[0m
+      [31m  Diff:[0m[0m
+      [31m  [0m[34m@@ -1 +1 @@[0m
+      [31m  [0m[31m-/back/i[0m
+      [31m  [0m[32m+"Edit"[0m
+      [31m  [0m[0m
+      [36m# ./spec/system/books_spec.rb:110:in `block (4 levels) in <main>'[0m
+
+  14) 投稿のテスト 詳細画面のテスト リンクの遷移先の確認 Editの遷移先は編集画面か
+      [31mFailure/Error: expect(current_path).to eq('/books/' + book.id.to_s + '/edit')[0m
+      [31m[0m
+      [31m  expected: "/books/1/edit"[0m
+      [31m       got: "/books/1"[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/system/books_spec.rb:117:in `block (4 levels) in <main>'[0m
+
+  15) 投稿のテスト 詳細画面のテスト リンクの遷移先の確認 Backの遷移先は一覧画面か
+      [31mFailure/Error: expect(page).to have_current_path books_path[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested_2::Nested_2:0x00000000072d4900>[0m
+      [36m# ./spec/system/books_spec.rb:122:in `block (4 levels) in <main>'[0m
+
+  16) 投稿のテスト 編集画面のテスト リンクの遷移先の確認 Backの遷移先は一覧画面か
+      [31mFailure/Error: expect(page).to have_current_path books_path[0m
+      [31m[0m
+      [31mNameError:[0m
+      [31m  undefined local variable or method `books_path' for #<RSpec::ExampleGroups::Nested::Nested_3::Nested_2:0x00000000078dc398>[0m
+      [36m# ./spec/system/books_spec.rb:156:in `block (4 levels) in <main>'[0m
+
+  17) 投稿のテスト 編集画面のテスト 更新処理に関するテスト 更新後のリダイレクト先は正しいか
+      [31mFailure/Error: expect(page).to have_current_path book_path(book)[0m
+      [31m  expected "/books/1" to equal "/books.1"[0m
+      [36m# ./spec/system/books_spec.rb:176:in `block (4 levels) in <main>'[0m
+
+Finished in 0.67291 seconds (files took 0.86936 seconds to load)
+[31m29 examples, 17 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/models/book_spec.rb:28[0m [36m# Book モデルに関するテスト titleを空白で投稿した場合に画面にエラーメッセージが表示されているか エラーメッセージは正しく表示されるか[0m
+[31mrspec ./spec/models/book_spec.rb:38[0m [36m# Book モデルに関するテスト bodyを空白で投稿した場合に画面にエラーメッセージが表示されているか エラーメッセージは正しく表示されるか[0m
+[31mrspec ./spec/system/books_spec.rb:10[0m [36m# 投稿のテスト トップ画面(root_path)のテスト 表示の確認 トップ画面(root_path)に一覧ページへのリンクが表示されているか[0m
+[31mrspec ./spec/system/books_spec.rb:23[0m [36m# 投稿のテスト 一覧画面のテスト 一覧の表示とリンクの確認 bookの一覧表示(tableタグ)と投稿フォームが同一画面に表示されているか[0m
+[31mrspec ./spec/system/books_spec.rb:28[0m [36m# 投稿のテスト 一覧画面のテスト 一覧の表示とリンクの確認 bookのタイトルと感想を表示し、詳細・編集・削除のリンクが表示されているか[0m
+[31mrspec ./spec/system/books_spec.rb:51[0m [36m# 投稿のテスト 一覧画面のテスト 一覧の表示とリンクの確認 Create Bookボタンが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:56[0m [36m# 投稿のテスト 一覧画面のテスト 投稿処理に関するテスト 投稿に成功しサクセスメッセージが表示されるか[0m
+[31mrspec ./spec/system/books_spec.rb:62[0m [36m# 投稿のテスト 一覧画面のテスト 投稿処理に関するテスト 投稿に失敗する[0m
+[31mrspec ./spec/system/books_spec.rb:67[0m [36m# 投稿のテスト 一覧画面のテスト 投稿処理に関するテスト 投稿後のリダイレクト先は正しいか[0m
+[31mrspec ./spec/system/books_spec.rb:75[0m [36m# 投稿のテスト 一覧画面のテスト book削除のテスト application.html.erbにjavascript_pack_tagを含んでいるか[0m
+[31mrspec ./spec/system/books_spec.rb:86[0m [36m# 投稿のテスト 一覧画面のテスト book削除のテスト bookの削除[0m
+[31mrspec ./spec/system/books_spec.rb:104[0m [36m# 投稿のテスト 詳細画面のテスト 表示の確認 Editリンクが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:108[0m [36m# 投稿のテスト 詳細画面のテスト 表示の確認 Backリンクが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:114[0m [36m# 投稿のテスト 詳細画面のテスト リンクの遷移先の確認 Editの遷移先は編集画面か[0m
+[31mrspec ./spec/system/books_spec.rb:119[0m [36m# 投稿のテスト 詳細画面のテスト リンクの遷移先の確認 Backの遷移先は一覧画面か[0m
+[31mrspec ./spec/system/books_spec.rb:153[0m [36m# 投稿のテスト 編集画面のテスト リンクの遷移先の確認 Backの遷移先は一覧画面か[0m
+[31mrspec ./spec/system/books_spec.rb:172[0m [36m# 投稿のテスト 編集画面のテスト 更新処理に関するテスト 更新後のリダイレクト先は正しいか[0m
+
