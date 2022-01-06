@@ -19,9 +19,9 @@
                 </th>
                 <th class="index-bottom">
                     <p>
-                    <%=link_to 'Show',show_book_path(book.id)%>
+                    <%=link_to 'Show',book_path(book.id)%>
                     <%=link_to 'Edit',edit_book_path(book.id)%>
-                    <%=link_to 'Destroy',show_book_path(book.id),method: :delete,'data-confirm'=>'Are you sure?'%>
+                    <%=link_to 'Destroy',book_path(book.id),method: :delete,'data-confirm'=>'Are you sure?'%>
                     </p>
                 </th>
             </tbody>
@@ -49,6 +49,6 @@
         <div class="new-box2"><%=f.text_field:title%></div>
         <div class="new-box3"><%=f.label:body%></div>
         <div class="new-box4"><%=f.text_area:body%></div>
-        <div class="new-box5"><%=f.submit'Create book'%></div>
+        <div class="new-box5"><%=f.submit'Create Book'%></div>
         <%end%>
 </div>
